@@ -124,6 +124,26 @@ var CountUp = function(target, startVal, endVal, decimals, duration, options) {
 		else if (self.d.tagName === 'text' || self.d.tagName === 'tspan') {
 			this.d.textContent = result;
 		}
+        //
+        // START CHROMATIX TM 24-25/01/2017
+        //
+        // - Custom use for result when using a <VIDEO> tag - for video background
+        // - Custom use for result when using a <FIGURE> tag - for figure image
+        //
+
+        else if (self.d.tagName === 'VIDEO' ) {
+            this.d.currentTime = result;
+        }
+
+        else if (self.d.tagName === 'FIGURE' ) {
+            jQuery( this.d ).attr( 'data-chr-parallax-current', result );
+            jQuery( this.d ).css( 'transform', 'translateY(' + result + 'px)');
+        }
+
+        //
+        // END CHROMATIX TM 24-25/01/2017
+        //
+
 		else {
 			this.d.innerHTML = result;
 		}
