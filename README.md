@@ -5,6 +5,8 @@ Despite its name, CountUp can count in either direction, depending on the `start
 
 CountUp.js supports all browsers.
 
+This has been modified specifically for use with video and figure tags.  Do not use unless you understand the modifications.
+
 ## [Try the demo](http://inorganik.github.io/countUp.js)
 
 ## Installation
